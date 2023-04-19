@@ -23,17 +23,23 @@ def list_highscores():
     #opens file in Append Mode
     listing = open('scores_file.txt', 'a')
     
+    #generates random 'scores' and appends them to file
     score = random.randint(1,100)
     listing.write(f'\n{score}')
-        
+    
+    #closes file
     listing.close()
 
 def read_print():
+    #opens file in Reading Mode
     read = open('scores_file.txt', 'r')
     
     read_all = read.read()
     
+    #prints all data inside file
     print(read_all)
+    
+    #closes file
     read.close()
     
 def main():
